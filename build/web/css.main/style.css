@@ -1,0 +1,213 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-11-8, 10:23:50
+    Author     : KiKo
+*/
+.navbar-nav li:hover{
+    color:red !important;
+}
+
+.footers {
+    margin-right:50em;
+}
+
+.user{
+    height: 10em !important;
+    margin: 0px;
+}
+
+.profile{
+    margin-top: 10em; 
+    text-align: center;
+}
+
+.one h1 {
+    color:green !important;
+}
+
+.one p {
+   color:green; 
+}
+.one{
+    height: 70em;
+    background-image: url("../Pictures/one.jpg");
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
+.two{
+    height: 80em;
+    background-image: url("../Pictures/two.jpg");
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
+.three{
+    height: 75em;
+    background-image: url("../Pictures/three.jpg");
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
+.trainer_one {
+    margin-top: 9em !important ;
+    margin-left: 5em !important;
+    height: 62em ;
+    width:60%;
+    text-align: center ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.trainer_one_schedule {
+    margin-top: 15em;
+    margin-left: 42em;
+}
+
+.trainer_one_button {
+    margin-top:2em;
+}
+
+.trainer_onebutton {
+    margin-left: 63em;
+    width: 20em;
+}
+
+.trainer_two_schedule {
+    margin-top: 10em;
+    margin-left: 42em;
+}
+
+.trainer_two_button {
+    margin-top:3em;
+}
+
+.trainer_twobutton {
+    margin-left: 58em;
+    width: 20em;
+}
+
+.trainer_two {
+    margin-top: 9em !important ;
+    height: 62em ;
+    width:60%;
+    margin-left: 12em !important;
+    text-align: center ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.bodyregister{
+    background-repeat: no-repeat;
+    background-image: url("../Pictures/register.jpg");
+}
+
+.bodytrainer{
+    background-repeat: no-repeat;
+    background-image: url("../Pictures/picone.jpg");
+}
+
+.bodyschedule{
+    background-repeat: no-repeat;
+    background-image: url("../Pictures/pictwo.jpg");
+}
+
+.bodyprofile{
+    background-repeat: no-repeat;
+    background-image: url("../Pictures/picthree.jpg");
+}
+
+.register{
+    margin-top: 9em;
+    height: 60em ;
+    width:60%;
+    margin-left:20em;
+}
+
+.bodylogin{
+   background-repeat: no-repeat; 
+   background-image: url("../Pictures/picfive.jpg");
+}
+
+.bodyadmin{
+   background-repeat: no-repeat; 
+   background-image: url("../Pictures/admin.jpeg");
+}
+
+.login{
+    height: 30em;
+    margin-top: 9em;
+    width:60%;
+    margin-left:53em;
+}
+
+.header {
+    /* margin-top: 1.5em; */
+}
+
+.username {
+    margin-top: 4em;
+}
+.bodyabout{
+  
+    background-image: url("../Pictures/about.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.about { 
+    margin-top: 13em !important ;
+    height: 60em ;
+    width:60%;
+    margin-left:20em;
+    text-align: center ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.about p {
+    font-size: 1.3em !important;
+    
+}
+
+.bodycontactus{
+  
+    background-image: url("../Pictures/contact.jpg");
+    background-repeat: no-repeat;
+}
+
+.contactus {
+    margin-top: 11em !important ;
+    
+}
+
+.contactus h1{
+    margin-left: 0.4em ;
+   
+}
+
+.contactus p {
+    font-size: 1.3em !important;
+    
+}
+
+.pabout .btns {
+    width:20em;
+}
+ 
+.header_right {
+    position:absolute;
+    left: 110em;
+}
+
+.welcome_user {
+    color:wheat;
+    position:absolute;
+    left: 100em;
+    margin-top: 1.15em;
+    font-weight: bolder;
+}
