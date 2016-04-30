@@ -20,12 +20,12 @@
         <li><a href="about.jsp">About</a></li>
         <li><a href="schedule.jsp">Schedule</a></li>
         <li><a href="trainers.jsp">Trainers</a></li>
-        <li><a href="shop.jsp">Shop</a></li>
+        <li><a href="shop.jsp">Online Shop</a></li>
         <li><a href="gallery.jsp">Gallery</a></li>
         <li><a href="contactus.jsp">Contact Us</a></li>
       </ul>
         
-        <ul class="nav navbar-nav header_right">
+        <ul class="nav navbar-nav header_right right_menu">
         <li><a href="register.jsp">Register</a></li>
         <li><a href="log.jsp">Login</a></li>
         </ul>
@@ -46,29 +46,23 @@
         <li><a href="contactus.jsp">Contact Us</a></li>
         <li>
             <a class="dropdown" data-toggle="dropdown">Admin<span class="caret"></span></a> 
-                
                 <ul class="dropdown-menu">
                     <li><a href="AdminFormController">Shop Management</a></li>
                     <li><a href="AdminGalleryController">Gallery Management</a></li>
-                </ul>
-                    
+                </ul>            
         </li>
-
 </ul>
         
         
 <ul class="nav navbar-nav header_right">
     <li><a href="ViewCartController"><img src="Pictures/cart-button.png"/>  (items:${fn:length(cart)})</a>  </li>
         <li><a href="profile.jsp">Profile</a></li>
-        <li><a href="logout.jsp">Logout</a></li>
-       
-        
+        <li><a href="logout.jsp">Logout</a></li>       
 </ul>
   
         
             <div class="welcome_user">
-
-            Welcome ${user}
+                Welcome ${user}
             </div>
          
 <%

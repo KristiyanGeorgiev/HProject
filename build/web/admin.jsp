@@ -11,7 +11,7 @@
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Admin Panel</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -42,18 +42,18 @@
     <body class="bodyadmin">
 
         <div class='container'>
-            <div class='jumbotron login' style="display:table; margin:0 auto;">
-
-                <h2 class='header'>Upload a Product</h2>
+            <div class='jumbotron login'>
+                <div class="panel_title_admin">Upload a Product</div>
+                
                 ${result}
 
                 <form action="AdminPanelController" id="upload_product"   enctype="multipart/form-data"  method="POST">
                     <div class="form-group">
-                        <label for="name" >Name of the product</label>
+                        <label for="name" >Name of the product:</label>
                         <input class="form-control" type="text" id="name" name = "name">
                     </div>
                     <div class="form-group">
-                        <label for="price">price</label>
+                        <label for="price">Price</label>
                         <input class="form-control" type="text" id="price" name= "price">
                     </div>
                     <div class="form-group">

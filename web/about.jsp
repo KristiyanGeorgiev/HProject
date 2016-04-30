@@ -19,22 +19,43 @@
     <%@include file ="header.jsp"%>
     
     <body class='bodyabout'>
-        <div class='container'>
-            <div class='jumbotron about'>
-                
-                <h2>About Marc "The FreacanRican" Navarro</h2><br>
-                <p>Marc has been boxing since he was a kid, and he has a true passion for all aspects. Currently holding 3 Pro K1 titles and a British boxing cruiser wight title.</p>
+        
+            
+            <div class="col-md-8 col-sm-8 col-xs-12 container_whole">
+                <div class="panel-container-about">
+                    
+                        <div class="panel_title">About Marc "The FreacanRican" Navarro</div>
+                        <div class="body-panel-about">
+                            <h2>Marc "The FreacanRican" Navarro</h2><br>
+                            <p>Marc has been boxing since he was a kid, and he has a true passion for all aspects. Currently holding 3 Pro K1 titles and a British boxing cruiser wight title.</p>
 
-                <p>Fighting against some of the best fighters in the UK, not only in K1 but in boxing too.</p>
+                            <p>Fighting against some of the best fighters in the UK, not only in K1 but in boxing too.</p>
 
-                <p>Which means Marc really knows what he is talking about and believes in practicing what he preaches. </p>
+                            <p>Which means Marc really knows what he is talking about and believes in practicing what he preaches. </p>
 
-                <p>With the experience Marc has gained, there is no other training class that can match his skills and ability to teach. Training at Navarro’s fitness & fighting gym and learning either to fight, lose weight or get fit has giving many people results and body confidence.</p>
+                            <p>With the experience Marc has gained, there is no other training class that can match his skills and ability to teach. Training at Navarro’s fitness & fighting gym and learning either to fight, lose weight or get fit has giving many people results and body confidence.</p>
 
-                <p>No matter what your goal is whether it is to be fit, learn to box, or lose weight Navarro’s Fitness & Fighting Gym can accommodate and produce results. But ultimately you have to be willing to put in the hard work to achieve the goals you set. </p>
-                
-            </div>    
-        </div>  
+                            <p>No matter what your goal is whether it is to be fit, learn to box, or lose weight Navarro’s Fitness & Fighting Gym can accommodate and produce results. But ultimately you have to be willing to put in the hard work to achieve the goals you set. </p>
+                        </div>
+                    
+                </div> 
+            </div>
+        
+        
+            <div class="col-md-4 col-sm-4 col-xs-12 container_whole">
+                <div class="panel-container-buttons">
+                    
+                        <div class="panel_title">About Marc "The FreacanRican" Navarro</div>
+                        <div class="body-panel-buttons">
+                            <button type="button" class="btn btn-primary about_button_one">See Mark's Schedule</button>
+                            <button type="button" class="btn btn-primary about_button_two">Book a session with Mark</button>
+                            <button type="button" class="btn btn-primary about_button_three">Bibliography</button>
+                        </div>
+                    
+                </div> 
+            </div>
+              
+        
         
       <%@include file ="footer.jsp"%>
     </body>

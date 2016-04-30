@@ -52,9 +52,6 @@
     <%@include file ="header.jsp"%>
     <body class="bodyadmin">
 
-
-
-
         <h2 class='header'>Gallery:</h2>
         ${edit}
         <div style="  display:none; margin:0 auto; background-color: rgba(0,0,0,0.4); width:80%;" id="tableImagesDiv">

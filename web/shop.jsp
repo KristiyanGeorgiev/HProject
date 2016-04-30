@@ -12,7 +12,7 @@
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Online Shop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -57,40 +57,41 @@
     </head>
     <%@include file ="header.jsp"%>
     <body class="bodyadmin">
-
-
-
-
-        <h2 class='header'>Products:</h2>
+        
         ${edit}
-        <div style="  display:none; margin:0 auto; background-color: rgba(0,0,0,0.4); width:80%;" id="tableProductsDiv">
-            <div style="margin:0 auto;width:1000px">
+        <div class='shop_class' id="tableProductsDiv">
+            <div id='products'>
                 <h1  style="text-align: center">${msg} </h1>
                 <c:forEach items="${allProducts}" var="nextProduct">
 
-                    <div style="display: inline-block;padding: 20px; ">
-                         <form action="AddToCartController" id="add_to_cart"     method="GET">
-                        <div>
-                            <h3>Product: ${nextProduct.name}</h3>
-                        </div>
-                        <div>
-                            <img src="data:image/png;base64,${nextProduct.imgString}"  width="200px">
-                        </div>
-                        <div>
-                            <p>Price : ${nextProduct.price}</p>
-                        </div>
-                        <div id="q">
-                            <label for="quantity">Quantity:</label>
-                            <div> 
-                                <a id='dec' href='#' style=" font-size:1.3em;  margin-right: 6px;">&#45</a>
-                                <input id="quantity" name="quantity" value="1" readonly="readonly"  style=" text-align: center; background-color:transparent;border:none;margin-top:0px;margin-bottom:0px; width:50px; color:black;    padding: 4px 0px;">
-                                <a id='inc'   href='#' style=" font-size:1.3em; margin-left: 0;">&#43</a>
+                    <div class='products'>
+                        <form action="AddToCartController" id="add_to_cart"     method="GET">
+                           <div class="panel-container-items">
+                             <div class="panel_title">${nextProduct.name}</div>
+                                <div class="body-panel-items">
+
+                                    <div id="shop_images">
+                                        <img src="data:image/png;base64,${nextProduct.imgString}">
+                                    </div>
+                                
+                                    <div id="shop_price">
+                                        <p>Price : ${nextProduct.price}</p>
+                                    </div>
+                                
+                                    <div id="q">
+                                            <label for="quantity">Quantity:</label>
+                                        <div>                                    
+                                            <a id='dec' href='#'>&#45</a>
+                                            <input id="quantity" name="quantity" value="1" readonly="readonly"  style=" text-align: center; background-color:transparent;border:none;margin-top:0px;margin-bottom:0px; width:50px; color:black;    padding: 4px 0px;">
+                                            <a id='inc'   href='#'>&#43</a>
+                                        </div>
+                                    </div>
+                                
+                                    <input type="hidden" name="id" value="${nextProduct.id}">
+                                    <button class="btn btn-primary">Add to cart</button>
+                             </div>
                             </div>
-                        </div>
-                        
-                             <input type="hidden" name="id" value="${nextProduct.id}">
-                             <button>Add to cart</button>
-                         </form>
+                        </form>
                     </div>
                 </c:forEach>
             </div>

@@ -11,7 +11,7 @@
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Gallery</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -42,9 +42,9 @@
     <body class="bodyadmin">
 
         <div class='container'>
-            <div class='jumbotron login' style="display:table; margin:0 auto;">
-
-                <h2 class='header'>Upload an Image</h2>
+            <div class='jumbotron login'>
+                <div class="panel_title_admin">Upload an Image</div>
+                
                 ${result}
 
                 <form action="AdminGalleryPanelController" id="upload_image"   enctype="multipart/form-data"  method="POST">

@@ -20,23 +20,76 @@
 
 <body>
 
-  <div class="jumbotron one">
-    <h1>Bootstrap Tutorial</h1> 
-    <p>Bootstrap is the most popular HTML, CSS, 
-    responsive, mobile-first projects on the web.</p> 
-  </div>
+<div class="jumbotron one">
+    
+    <div class="col-md-4 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="/group/ps/appointments">
+  		<div class="panel_title">Training Schedule</div>
+                    <div class="body-panel panel-schedule"></div>
+            </a>
+  	</div> 
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="/group/ps/appointments">
+  		<div class="panel_title">Purchase a monthly membership</div>
+                    <div class="body-panel panel-membership"></div>
+            </a>
+  	</div> 
+    </div>
+</div>
 
+ 
+    
   <div class="jumbotron two">
-    <h1>Bootstrap Tutorial</h1> 
-    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-    responsive, mobile-first projects on the web.</p> 
-  </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="/group/ps/appointments">
+  		<div class="panel_title">Meet the Trainers</div>
+                    <div class="body-panel panel-trainers"></div>
+            </a>
+  	</div> 
+    </div>
+    
+    
+    
+    <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="/group/ps/appointments">
+  		<div class="panel_title">Register an account</div>
+                    <div class="body-panel panel-register"></div>
+            </a>
+  	</div> 
+    </div>
+</div>
+ 
     
   <div class="jumbotron three">
-    <h1>Bootstrap Tutorial</h1> 
-    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-    responsive, mobile-first projects on the web.</p> 
-  </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="/group/ps/appointments">
+  		<div class="panel_title">View the Gallery</div>
+                    <div class="body-panel panel-gallery"></div>
+            </a>
+  	</div> 
+    </div>
+    
+    
+    
+    <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="/group/ps/appointments">
+  		<div class="panel_title">View the shop</div>
+                    <div class="body-panel panel-shop"></div>
+            </a>
+  	</div> 
+    </div>
+</div>
+  
 
 <%@include file ="footer.jsp" %>
 

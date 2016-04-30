@@ -34,7 +34,7 @@ and open the template in the editor.
 }
 .one{
     height: 70em;
-    background-image: url("../Pictures/one.jpg");
+    background-image: url("../Pictures/three.jpg");  
     margin: 0px;
     background-repeat: no-repeat;
 }
@@ -48,7 +48,7 @@ and open the template in the editor.
 
 .three{
     height: 75em;
-    background-image: url("../Pictures/three.jpg");
+    background-image: url("../Pictures/one.jpg");
     margin: 0px;
     background-repeat: no-repeat;
 }
@@ -140,24 +140,20 @@ and open the template in the editor.
 
 .login{
     height: 30em;
-    margin-top: 9em;
+    margin-top: 6em !important;
     width:60%;
     margin-left:53em;
-}
-
-.header {
-    /* margin-top: 1.5em; */
+    display:table; 
+    margin:0 auto;
 }
 
 .username {
     margin-top: 4em;
 }
-.bodyabout{
-  
+.bodyabout{  
     background-image: url("../Pictures/about.jpg");
     background-repeat: no-repeat;
 }
-
 
 .about { 
     margin-top: 13em !important ;
@@ -171,28 +167,31 @@ and open the template in the editor.
 
 .about p {
     font-size: 1.3em !important;
-    
+    color: #9a2d23;
 }
 
+.about h2 {
+    color: #9a2d23;
+}
+
+.header h2{
+    margin-top: 0em !important;
+}
 .bodycontactus{
-  
     background-image: url("../Pictures/contact.jpg");
     background-repeat: no-repeat;
 }
 
 .contactus {
-    margin-top: 11em !important ;
-    
+    margin-top: 11em !important ;   
 }
 
 .contactus h1{
-    margin-left: 0.4em ;
-   
+    margin-left: 0.4em ;   
 }
 
 .contactus p {
-    font-size: 1.3em !important;
-    
+    font-size: 1.3em !important;   
 }
 
 .pabout .btns {
@@ -210,4 +209,255 @@ and open the template in the editor.
     left: 100em;
     margin-top: 1.15em;
     font-weight: bolder;
+}
+
+.container_whole {
+    margin-top: 5em;
+}
+
+.panel-container {	
+	height: 33.5em;
+	border: solid 0.2em #9a2d43;
+	border-radius: 0.5em;
+	opacity: 0.95;
+	margin: 0 auto;
+	margin-top: 2em;
+	max-width: 24em;
+}
+
+.panel-container a {
+	text-decoration: none !important;
+}
+
+.panel-container:hover{
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+	transform: scale(1.1);
+	opacity: 2;
+}
+
+.panel_title {
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	text-align: center !important;
+	color: #fff;
+	border-colour: #337ab7;
+	background-color: #9a2d43;
+	margin: 0 auto;
+	font-size: larger;
+}
+
+.body-panel {	
+	height: 30em;
+	background-position: center;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.panel-schedule {
+    background-image: url("http://previews.123rf.com/images/kchung/kchung1408/kchung140801584/30902954-schedule-word-circle-marked-on-a-calendar-by-a-red-pen-Stock-Vector.jpg");
+}
+
+.panel-membership {
+    background-image: url("http://www.justinwaynedating.com/wp-content/uploads/2012/09/JW-Monthly-Membership.png");
+}
+
+.panel-trainers {
+    background-image: url("http://i.telegraph.co.uk/multimedia/archive/01853/amir-khan_1853789c.jpg");
+    height: 30em;
+    width: 24em;
+}
+
+.panel-register {
+    background-image: url("http://mapleleaftax.com/wp-content/uploads/2015/09/tax_regulations.gif");
+}
+
+.panel-gallery {
+    background-image: url("https://lh6.ggpht.com/QVMOKD4L6r9eisfhL8wPrOTyyGELCY6uu5kSb4R5gemDeHM_WtvK2R3PPDIhuLWtRQ=h900");
+    height: 30em;
+    width: 24em;
+}
+
+.panel-shop {
+    background-image: url("http://www.pilotguides.com/wordpress/wp-content/uploads/2013/08/Thai-Boxing-Shop-by-Miles-Flickr-commons.jpg");
+    height: 30em;
+    width: 24em;
+}
+
+.body-panel-about {	
+	height: 30em;
+        width: 59.7em;
+	background-position: center;
+	background-size: cover;
+        background-color:#eee;
+}
+
+.panel-container-about {	
+	height: 33.5em;
+        width: 60em;
+	border: solid 0.2em #9a2d43;
+	border-radius: 0.5em;
+	opacity: 0.95;
+	margin: 0 auto;
+	margin-top: 6em;
+	max-width: 80em;
+}
+
+.body-panel-about h2 {
+    margin-top: 0em;
+    margin-left: 6em;
+}
+
+.panel-container-buttons{
+        height: 23.5em;
+        width: 20em;
+	border: solid 0.2em #9a2d43;
+	border-radius: 0.5em;
+	opacity: 0.95;
+	margin: 0 auto;
+	margin-top: 6em;
+	max-width: 50em;
+}
+
+.body-panel-buttons {	
+	height: 20em;
+        width: 19.7em;
+	background-position: center;
+	background-size: cover;
+        background-color:#eee;
+}
+
+.about_button_one {
+    background-color: #337ab7 !important;
+    margin-left: 3.7em;
+    margin-top: 2em;
+    padding-left: 1.8em !important;
+    padding-right: 1.8em !important;
+}
+
+.about_button_two {
+    background-color: #337ab7 !important;
+    margin-left: 3.7em;
+    margin-top: 2em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+}
+
+.about_button_three {
+    background-color: #337ab7 !important;
+    margin-left: 3.7em;
+    margin-top: 2em;
+    padding-left: 3.8em !important;
+    padding-right: 3.8em !important;
+}
+
+.button_trainers {
+   background-color: #337ab7 !important; 
+}
+
+.panel_title_trainers {
+	padding: 12px 17px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	text-align: center !important;
+	color: #fff;
+	border-colour: #337ab7;
+	background-color: #9a2d43;
+	margin: 0 auto;
+	font-size: larger;
+}
+
+.trainer_one {
+    padding: 0 !important;
+}
+
+.trainer_two {
+    padding: 0 !important;
+}
+
+.image_trainers{
+    width:22em;
+    height:12em;
+    margin-top: 1.5em;    
+}
+
+.panel_title_admin {
+	padding: 12px 17px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	text-align: center !important;
+	color: #fff;
+	border-colour: #337ab7;
+	background-color: #9a2d43;
+	margin: 0 auto;
+        margin-bottom: 1em;
+	font-size: larger;
+}
+
+.shop_class{
+    display:none; 
+    margin:0 auto; 
+    background-color: #fff; 
+    width:75%;
+}
+
+#product_name h3{
+    font-size: 20px !important;
+}
+
+.products{
+    height:28.8em;
+    display: inline-block;
+    padding: 20px;
+}
+
+#products{
+    margin:0 auto;
+    width: 1200px;
+    height: 1200px;
+}
+
+#shop_images img{
+     height: 15.5em;; 
+     width: 17.2em;
+}
+
+#shop_price p{
+    font-weight: bolder;
+    margin-top: 1.2em;
+}
+
+#dec{
+    font-size:1.3em;  
+    margin-right: 6px;
+}
+
+#inc{
+    font-size:1.3em; 
+    margin-left: 0;
+}
+
+.body-panel-items {	
+	height: 25.3em;
+        width: 17.2em;
+	background-position: center;
+	background-size: cover;
+        background-color:#eee;
+}
+
+.panel-container-items {	
+	height: 28.8em;
+        width: 17.5em;
+	border: solid 0.2em #9a2d43;
+	border-radius: 0.5em;
+	opacity: 0.95;
+	margin: 0 auto;
+	margin-top: 6em;
+	max-width: 80em;
+        text-align: center;
 }
