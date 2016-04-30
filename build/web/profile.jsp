@@ -3,8 +3,10 @@
     Created on : 2016-1-17, 4:49:02
     Author     : KiKo
 --%>
+
 <%@page import="java.util.Iterator"%>
 <%@page import="beans.User"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +84,7 @@
                         <div class="panel-body">
                             <div class="usermenu">
                         
-                            <a class="btn btn-primary btns" href="editprofile.jsp">Edit Your Profile</a><br><br>
+                            <a class="btn btn-primary btns" href="EditProfile">Edit Your Profile</a><br><br>
                             
                             <a class="btn btn-primary btns" href="membership.jsp">Monthly Membership</a><br><br>
                             

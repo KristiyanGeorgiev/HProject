@@ -12,17 +12,16 @@ import MySqlDatabase.Database;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class User {  
+public class User {
 
-   private String username;
-   private String password;
-   private String firstname;
-   private String lastname;
-   private String email;
-   private String country;
-   private String street;
-   private String postcode;
-        
+    private String username;
+    private String password;
+    private String firstname;
+    private String lastname;
+    private String email;
+    private String country;
+    private String street;
+    private String postcode;
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
@@ -41,23 +40,23 @@ public class User {
     }
 
     public void setUsername(String username) {
-       this.username = username;
+        this.username = username;
     }
 
     public String getUsername() {
         return username;
     }
-    
+
     public void setStreet(String street) {
-       this.street = street;
+        this.street = street;
     }
 
     public String getStreet() {
         return street;
     }
-    
+
     public void setPostcode(String postcode) {
-       this.postcode = postcode;
+        this.postcode = postcode;
     }
 
     public String getPostcode() {
@@ -89,63 +88,63 @@ public class User {
 
     }
 
-
-    public void RegisterUser()
-    {
-        try
-        {    
+    public void RegisterUser() {
+        try {
             Database conn = new Database();
-            Connection connection= conn.Connection();
+            Connection connection = conn.Connection();
 
-            String sqlString="INSERT INTO users (first_name,last_name,email,uname,pass,country,street,postcode,regdate) VALUES ('"+firstname+"','"+lastname+"','"+email+"','"+username+"','"+password+"','"+country+"','"+street+"','"+postcode+"',CURDATE())";
-            
+            String sqlString = "INSERT INTO users (first_name,last_name,email,uname,pass,country,street,postcode,regdate) VALUES ('" + firstname + "','" + lastname + "','" + email + "','" + username + "','" + password + "','" + country + "','" + street + "','" + postcode + "',CURDATE())";
+
             Statement myStatement = connection.createStatement();
-            
-            try
-            {    
+
+            try {
                 myStatement.executeUpdate(sqlString);
                 myStatement.close();
                 connection.close();
-            } catch (SQLException ex) {Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);}
-        } catch (SQLException ex) {Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);}  
+            } catch (SQLException ex) {
+                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
-    public void GetUser()
-    {
-            try 
-            {      
-                Database conn=new Database();
-                Connection connection= conn.Connection();
-                
-                String sqlString = "SELECT * FROM users WHERE username = '"+username+"'";
-                Statement statement = connection.createStatement();
-                ResultSet rs=statement.executeQuery(sqlString);
 
-                while(rs.next())
-                {
-                    firstname= rs.getString("firstname");
-                    lastname = rs.getString("lastname");
-                    username= rs.getString("username");
-                    email= rs.getString("email");
-                    country= rs.getString("country");
-                    street= rs.getString("street");
-                    postcode= rs.getString("postcode");
-                }
-                
-                statement.close();
-                connection.close();
-                
-            } catch (SQLException ex) {Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);} 
-            
+    public void GetUser() {
+        try {
+            Database conn = new Database();
+            Connection connection = conn.Connection();
+
+            String sqlString = "SELECT * FROM users WHERE username = '" + username + "'";
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sqlString);
+
+            while (rs.next()) {
+                firstname = rs.getString("firstname");
+                lastname = rs.getString("lastname");
+                username = rs.getString("username");
+                email = rs.getString("email");
+                country = rs.getString("country");
+                street = rs.getString("street");
+                postcode = rs.getString("postcode");
+            }
+
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
-    
-    public boolean authenticateUser()
-    {
+
+   
+
+    public boolean authenticateUser() {
         boolean auth = false;
         try {
             //-----------------Getting Connection-----------------------------------------        
             Database conn = new Database();
-            Connection connection= conn.Connection();
+            Connection connection = conn.Connection();
             //-----------------Getting Connection----------------------------------------- 
             PreparedStatement query = connection.prepareStatement("select count(*) from users where pass=? and uname=?");
 
@@ -159,7 +158,7 @@ public class User {
             if (rowCount > 0) {
                 auth = true;
             }
-            
+
             connection.close();
 
         } catch (Exception e2) {
@@ -168,6 +167,5 @@ public class User {
 
         return auth;
     }
-    
-}
 
+}

@@ -3,9 +3,13 @@
     Created on : 2016-4-6, 17:14:55
     Author     : KiKo
 --%>
+ 
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@page import="java.util.Iterator"%>
-<%@page import="beans.User"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,47 +30,47 @@
               
               
               
-              <jsp:useBean id="user" scope="request" class="beans.User"></jsp:useBean>
               
-              <form action="ProfileController" method="post" >
-                <div class="form-group username">
+              
+              <form action="UpdateProfileController" method="post" >
+                <div class="fProfileControllerorm-group username">
                     <label>Username:</label>
-                    <input type="text" name="username" value="<jsp:getProperty name="user" property="username"/>" class="form-control">
+                    <input type="text" name="username" value="${user.username}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>First Name:</label>
-                    <input type="text" name="firstname" value="<jsp:getProperty name="user" property="firstname"/>" class="form-control">
+                    <input type="text" name="firstname" value="${user.firstname}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Last Name:</label>
-                    <input type="text" name="lastname" value="<jsp:getProperty name="user" property="lastname"/>" class="form-control">
+                    <input type="text" name="lastname" value="${user.lastname}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Country:</label>
-                    <input type="text" name="country" value="<jsp:getProperty name="user" property="country"/>" class="form-control">
+                    <input type="text" name="country" value="${user.country}" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label>Street Address:</label>
-                    <input type="text" name="street" value="<jsp:getProperty name="user" property="street"/>" class="form-control">
+                    <input type="text" name="street" value="${user.street}" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label>Postcode:</label>
-                    <input type="text" name="postcode" value="<jsp:getProperty name="user" property="postcode"/>" class="form-control">
+                    <input type="text" name="postcode" value="${user.postcode}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Email address:</label>
-                    <input type="text" name="email" value="<jsp:getProperty name="user" property="email"/>" class="form-control">
+                    <input type="text" name="email" value="${user.email}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Password:</label>
-                    <input type="password" name="password" value="<jsp:getProperty name="user" property="password"/>" class="form-control">
+                    <input type="text" name="password" value="${user.password}" class="form-control">
                 </div>
 
         
