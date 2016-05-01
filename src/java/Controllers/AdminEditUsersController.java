@@ -1,28 +1,40 @@
- 
 package Controllers;
 
 import beans.GalleryService;
+import beans.User;
 import beans.UsersService;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+import javax.servlet.http.HttpSession;
+
 public class AdminEditUsersController extends HttpServlet {
 
-    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-       
+
         UsersService usersService = new UsersService();
-        request.setAttribute("users", usersService.getAllUsers());
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("user");
+        List<User> users = usersService.getAllUsers();
         
+        List<User> filteredUsers = new ArrayList<>();
+        for (User user : users) {
+            if (!user.getUsername().equals(username)){
+                filteredUsers.add(user);
+            }
+        }
+
+        request.setAttribute("users", filteredUsers);
+
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/delete_users.jsp");
         dispatch.forward(request, response);
