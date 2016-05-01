@@ -1,3 +1,4 @@
+ 
 package Controllers;
 
 import beans.User;
@@ -12,33 +13,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class UpdateProfileController extends HttpServlet {
+ 
+public class ProfileController extends HttpServlet {
 
+  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        //request.setAttribute("allImages", galleryService.getAllImages());
-        HttpSession session = request.getSession();
-        String loggedUsername = (String) session.getAttribute("user");
-        UsersService usersService = new UsersService();
-        User loggedUser = usersService.getUserByUsername(loggedUsername);
-
-        loggedUser.setUsername(request.getParameter("username"));
-        loggedUser.setFirstname(request.getParameter("firstname"));
-        loggedUser.setLastname(request.getParameter("lastname"));
-        loggedUser.setCountry(request.getParameter("country"));
-        loggedUser.setUsername(request.getParameter("username"));
-        loggedUser.setStreet(request.getParameter("street"));
-        loggedUser.setPostcode(request.getParameter("postcode"));
-        loggedUser.setEmail(request.getParameter("email"));
-        loggedUser.setPassword(request.getParameter("password"));
-        usersService.updateUser(loggedUser, loggedUsername);
-        
-        request.setAttribute("loggedUser", loggedUser);
-        
-        session.setAttribute("user", loggedUser.getUsername());
-
+         HttpSession session = request.getSession();
+         String username =  (String) session.getAttribute("user");
+         UsersService usersService = new UsersService();
+         User loggedUser= usersService.getUserByUsername(username);
+       
+         request.setAttribute("loggedUser", loggedUser);
+         
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/profile.jsp");
         dispatch.forward(request, response);

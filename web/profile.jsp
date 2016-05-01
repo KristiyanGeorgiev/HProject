@@ -35,31 +35,31 @@
                             <tbody>
                                 <tr>
                                     <td>Username:</td>
-                                    <td></td>
+                                    <td>${loggedUser.username}</td>
                                 </tr>
                                 <tr>
                                     <td>Firstname:</td>
-                                    <td></td>
+                                    <td>${loggedUser.firstname}</td>
                                 </tr>
                                 <tr>
                                     <td>Lastname:</td>
-                                    <td></td>
+                                    <td>${loggedUser.lastname}</td>
                                 </tr>
                                 <tr>
                                     <td>Email:</td>
-                                    <td></td>
+                                    <td>${loggedUser.email}</td>
                                 </tr>
                                 <tr>
                                     <td>Country:</td>
-                                    <td></td>
+                                    <td>${loggedUser.country}</td>
                                 </tr>
                                 <tr>
                                     <td>Street Address:</td>
-                                    <td></td>
+                                    <td>${loggedUser.street}</td>
                                 </tr>
                                 <tr>
                                     <td>Postcode:</td>
-                                    <td></td>
+                                    <td>${loggedUser.postcode}</td>
                                 </tr>
                                 <tr>
                                     <td>Membership:</td>

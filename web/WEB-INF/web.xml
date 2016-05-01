@@ -56,6 +56,18 @@
         <servlet-name>UpdateProfileController</servlet-name>
         <servlet-class>Controllers.UpdateProfileController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProfileController</servlet-name>
+        <servlet-class>Controllers.ProfileController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminEditUsersController</servlet-name>
+        <servlet-class>Controllers.AdminEditUsersController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteUsers</servlet-name>
+        <servlet-class>Controllers.DeleteUsers</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -111,6 +123,18 @@
     <servlet-mapping>
         <servlet-name>UpdateProfileController</servlet-name>
         <url-pattern>/UpdateProfileController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileController</servlet-name>
+        <url-pattern>/ProfileController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminEditUsersController</servlet-name>
+        <url-pattern>/AdminEditUsersController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteUsers</servlet-name>
+        <url-pattern>/DeleteUsers</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

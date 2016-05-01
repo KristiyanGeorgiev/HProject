@@ -1,6 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controllers;
 
-import beans.User;
 import beans.UsersService;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,37 +14,31 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class UpdateProfileController extends HttpServlet {
+ 
+public class DeleteUsers extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        //request.setAttribute("allImages", galleryService.getAllImages());
-        HttpSession session = request.getSession();
-        String loggedUsername = (String) session.getAttribute("user");
+        
+        
         UsersService usersService = new UsersService();
-        User loggedUser = usersService.getUserByUsername(loggedUsername);
-
-        loggedUser.setUsername(request.getParameter("username"));
-        loggedUser.setFirstname(request.getParameter("firstname"));
-        loggedUser.setLastname(request.getParameter("lastname"));
-        loggedUser.setCountry(request.getParameter("country"));
-        loggedUser.setUsername(request.getParameter("username"));
-        loggedUser.setStreet(request.getParameter("street"));
-        loggedUser.setPostcode(request.getParameter("postcode"));
-        loggedUser.setEmail(request.getParameter("email"));
-        loggedUser.setPassword(request.getParameter("password"));
-        usersService.updateUser(loggedUser, loggedUsername);
-        
-        request.setAttribute("loggedUser", loggedUser);
-        
-        session.setAttribute("user", loggedUser.getUsername());
+         
+        usersService.delete(request.getParameter("username"));
+        request.setAttribute("users", usersService.getAllUsers());
 
         ServletContext context = getServletContext();
-        RequestDispatcher dispatch = context.getRequestDispatcher("/profile.jsp");
+        RequestDispatcher dispatch = context.getRequestDispatcher("/delete_users.jsp");
         dispatch.forward(request, response);
     }
 

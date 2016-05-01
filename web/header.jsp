@@ -53,6 +53,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="AdminFormController">Shop Management</a></li>
                     <li><a href="AdminGalleryController">Gallery Management</a></li>
+                    <li><a href="AdminEditUsersController">Delete/Edit Users</a></li>
                 </ul>            
         </li>
 </c:if>
@@ -61,7 +62,7 @@
         
 <ul class="nav navbar-nav header_right">
     <li><a href="ViewCartController"><img src="Pictures/cart-button.png"/>  (items:${fn:length(cart)})</a>  </li>
-        <li><a href="profile.jsp">Profile</a></li>
+        <li><a href="ProfileController">Profile</a></li>
         <li><a href="logout.jsp">Logout</a></li>       
 </ul>
   
