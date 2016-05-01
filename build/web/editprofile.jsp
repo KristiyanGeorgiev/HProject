@@ -35,42 +35,42 @@
               <form action="UpdateProfileController" method="post" >
                 <div class="fProfileControllerorm-group username">
                     <label>Username:</label>
-                    <input type="text" name="username" value="${user.username}" class="form-control">
+                    <input type="text" name="username" value="${loggedUser.username}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>First Name:</label>
-                    <input type="text" name="firstname" value="${user.firstname}" class="form-control">
+                    <input type="text" name="firstname" value="${loggedUser.firstname}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Last Name:</label>
-                    <input type="text" name="lastname" value="${user.lastname}" class="form-control">
+                    <input type="text" name="lastname" value="${loggedUser.lastname}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Country:</label>
-                    <input type="text" name="country" value="${user.country}" class="form-control">
+                    <input type="text" name="country" value="${loggedUser.country}" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label>Street Address:</label>
-                    <input type="text" name="street" value="${user.street}" class="form-control">
+                    <input type="text" name="street" value="${loggedUser.street}" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label>Postcode:</label>
-                    <input type="text" name="postcode" value="${user.postcode}" class="form-control">
+                    <input type="text" name="postcode" value="${loggedUser.postcode}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Email address:</label>
-                    <input type="text" name="email" value="${user.email}" class="form-control">
+                    <input type="text" name="email" value="${loggedUser.email}" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Password:</label>
-                    <input type="text" name="password" value="${user.password}" class="form-control">
+                    <input type="text" name="password" value="${loggedUser.password}" class="form-control">
                 </div>
 
         

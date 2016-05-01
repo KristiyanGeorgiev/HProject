@@ -38,9 +38,9 @@ public class EditProfile extends HttpServlet {
          HttpSession session = request.getSession();
          String username =  (String) session.getAttribute("user");
          UsersService usersService = new UsersService();
-         User user= usersService.getUserByUsername(username);
+         User loggedUser= usersService.getUserByUsername(username);
        
-         request.setAttribute("user", user);
+         request.setAttribute("loggedUser", loggedUser);
          
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/editprofile.jsp");

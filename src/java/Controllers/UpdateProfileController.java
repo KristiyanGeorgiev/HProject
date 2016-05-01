@@ -20,22 +20,24 @@ public class UpdateProfileController extends HttpServlet {
 
         //request.setAttribute("allImages", galleryService.getAllImages());
         HttpSession session = request.getSession();
-        String loggedUser = (String) session.getAttribute("user");
+        String loggedUsername = (String) session.getAttribute("user");
         UsersService usersService = new UsersService();
-        User user = usersService.getUserByUsername(loggedUser);
+        User loggedUser = usersService.getUserByUsername(loggedUsername);
 
-        user.setUsername(request.getParameter("username"));
-        user.setFirstname(request.getParameter("firstname"));
-        user.setLastname(request.getParameter("lastname"));
-        user.setCountry(request.getParameter("country"));
-        user.setUsername(request.getParameter("username"));
-        user.setStreet(request.getParameter("street"));
-        user.setPostcode(request.getParameter("postcode"));
-        user.setEmail(request.getParameter("email"));
-         user.setPassword(request.getParameter("password"));
-        usersService.updateUser(user, loggedUser);
+        loggedUser.setUsername(request.getParameter("username"));
+        loggedUser.setFirstname(request.getParameter("firstname"));
+        loggedUser.setLastname(request.getParameter("lastname"));
+        loggedUser.setCountry(request.getParameter("country"));
+        loggedUser.setUsername(request.getParameter("username"));
+        loggedUser.setStreet(request.getParameter("street"));
+        loggedUser.setPostcode(request.getParameter("postcode"));
+        loggedUser.setEmail(request.getParameter("email"));
+         loggedUser.setPassword(request.getParameter("password"));
+        usersService.updateUser(loggedUser, loggedUsername);
         
-        request.setAttribute("user", user);
+        request.setAttribute("loggedUser", loggedUser);
+        
+        session.setAttribute("user", loggedUser.getUsername());
 
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/editprofile.jsp");

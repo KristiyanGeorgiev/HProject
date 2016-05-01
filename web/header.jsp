@@ -44,6 +44,10 @@
         <li><a href="ProductsController">Shop</a></li>
         <li><a href="GalleryController">Gallery</a></li>
         <li><a href="contactus.jsp">Contact Us</a></li>
+        
+         
+ 
+<c:if test='${user == "Admin"}'>
         <li>
             <a class="dropdown" data-toggle="dropdown">Admin<span class="caret"></span></a> 
                 <ul class="dropdown-menu">
@@ -51,6 +55,7 @@
                     <li><a href="AdminGalleryController">Gallery Management</a></li>
                 </ul>            
         </li>
+</c:if>
 </ul>
         
         
