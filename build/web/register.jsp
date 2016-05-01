@@ -27,37 +27,47 @@
               <form action="RegisterController" method="post" >
                 <div class="form-group username">
                     <label>Username:</label>
-                    <input type="text" name="username" value="<jsp:getProperty name="user" property="username"/>" class="form-control">
+                    <input type="text" name="username" value="<jsp:getProperty name="user" property="username"/>" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>First Name:</label>
-                    <input type="text" name="firstname" value="<jsp:getProperty name="user" property="firstname"/>" class="form-control">
+                    <input type="text" name="firstname" value="<jsp:getProperty name="user" property="firstname"/>" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>Last Name:</label>
-                    <input type="text" name="lastname" value="<jsp:getProperty name="user" property="lastname"/>" class="form-control">
+                    <input type="text" name="lastname" value="<jsp:getProperty name="user" property="lastname"/>" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>Country:</label>
                     <input type="text" name="country" value="<jsp:getProperty name="user" property="country"/>" class="form-control">
                 </div>
+                
+                <div class="form-group">
+                    <label>Street Address:</label>
+                    <input type="text" name="street" value="<jsp:getProperty name="user" property="street"/>" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>Postcode:</label>
+                    <input type="text" name="postcode" value="<jsp:getProperty name="user" property="postcode"/>" class="form-control">
+                </div>
                   
                 <div class="form-group">
                     <label>Email address:</label>
-                    <input type="text" name="email" value="<jsp:getProperty name="user" property="email"/>" class="form-control">
+                    <input type="text" name="email" value="<jsp:getProperty name="user" property="email"/>" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>Password:</label>
-                    <input type="password" name="password" value="<jsp:getProperty name="user" property="password"/>" class="form-control">
+                    <input type="password" name="password" value="<jsp:getProperty name="user" property="password"/>" class="form-control" required>
                 </div>
 
                   
                 <div class="checkbox">
-                <label><input type="checkbox">I Agree to the Terms and Conditions</label>
+                <label><input type="checkbox" required>I Agree to the Terms and Conditions</label>
                 </div>
                   
                 <button type="submit" value="Register" class="btn btn-primary">Register</button>

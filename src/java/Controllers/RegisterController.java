@@ -33,6 +33,8 @@ public class RegisterController extends HttpServlet
                 user.setPassword(request.getParameter("password"));
                 user.setEmail(request.getParameter("email"));
                 user.setCountry(request.getParameter("country"));
+                user.setStreet(request.getParameter("street"));
+                user.setPostcode(request.getParameter("postcode"));
 
                 user.RegisterUser();
 

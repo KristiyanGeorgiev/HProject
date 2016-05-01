@@ -122,8 +122,15 @@ and open the template in the editor.
 }
 
 .register{
-    margin-top: 9em;
-    height: 60em ;
+    margin-top: 4em;
+    height: 64em ;
+    width:60%;
+    margin-left:20em;
+}
+
+.membership{
+    margin-top: 8em;
+    height: 50em ;
     width:60%;
     margin-left:20em;
 }
@@ -445,6 +452,15 @@ and open the template in the editor.
 .body-panel-items {	
 	height: 25.3em;
         width: 17.2em;
+	background-position: center;
+	background-size: cover;
+        background-color:#eee;
+}
+
+.body-panel-membership {
+        margin-top: 6em;
+        height: 35.3em;
+        width: 37.2em;
 	background-position: center;
 	background-size: cover;
         background-color:#eee;

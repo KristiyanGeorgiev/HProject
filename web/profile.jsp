@@ -18,13 +18,6 @@
 <body class="bodyprofile">
     <%@include file ="header.jsp"%>
   
-    <%
-            java.util.LinkedList<User> user = null;
-            user = (java.util.LinkedList<User>) request.getAttribute("userdetails");
-            Iterator<User> iterator;
-            if (user != null) {
-                iterator = user.iterator();
-        %>
                 
 <div class="container profile">
         
@@ -36,38 +29,42 @@
                         <div class="panel-body">
                             <table class="table table-hover">
     
-                             <%
-                                while (iterator.hasNext()) {
-                                    User info = (User) iterator.next();
-                            %> 
+                            
                             <tbody>
                                 <tr>
                                     <td>Username:</td>
-                                    <td><%=info.getUsername()%></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Firstname:</td>
-                                    <td><%=info.getFirstname()%></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Lastname:</td>
-                                    <td><%=info.getLastname()%></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Email:</td>
-                                    <td><%=info.getEmail()%></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Country:</td>
-                                    <td><%=info.getCountry()%></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Street Address:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Postcode:</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Membership:</td>
                                     <td>16/02/2017</td>
                                 </tr>
                              </tbody>
-                <%}
-            }%>
+            
   </table>
 </div>
 
@@ -87,9 +84,9 @@
                         
                             <a class="btn btn-primary btns" href="editprofile.jsp">Edit Your Profile</a><br><br>
                             
-                            <a class="btn btn-primary btns" href="">Your Membership</a><br><br>
+                            <a class="btn btn-primary btns" href="membership.jsp">Monthly Membership</a><br><br>
                             
-                            <a class="btn btn-primary btns" href="contactus.jsp">Contact Us</a>
+                            <a class="btn btn-primary btns" href="paypalpay.jsp">Contact Us</a>
                             
                             </div>
                         </div>

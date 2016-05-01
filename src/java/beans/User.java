@@ -20,6 +20,8 @@ public class User {
    private String lastname;
    private String email;
    private String country;
+   private String street;
+   private String postcode;
         
 
     public void setFirstname(String firstname) {
@@ -44,6 +46,22 @@ public class User {
 
     public String getUsername() {
         return username;
+    }
+    
+    public void setStreet(String street) {
+       this.street = street;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+    
+    public void setPostcode(String postcode) {
+       this.postcode = postcode;
+    }
+
+    public String getPostcode() {
+        return postcode;
     }
 
     public void setEmail(String email) {
@@ -79,7 +97,7 @@ public class User {
             Database conn = new Database();
             Connection connection= conn.Connection();
 
-            String sqlString="INSERT INTO users (first_name,last_name,email,uname,pass,country,regdate) VALUES ('"+firstname+"','"+lastname+"','"+email+"','"+username+"','"+password+"','"+country+"',CURDATE())";
+            String sqlString="INSERT INTO users (first_name,last_name,email,uname,pass,country,street,postcode,regdate) VALUES ('"+firstname+"','"+lastname+"','"+email+"','"+username+"','"+password+"','"+country+"','"+street+"','"+postcode+"',CURDATE())";
             
             Statement myStatement = connection.createStatement();
             
@@ -110,6 +128,8 @@ public class User {
                     username= rs.getString("username");
                     email= rs.getString("email");
                     country= rs.getString("country");
+                    street= rs.getString("street");
+                    postcode= rs.getString("postcode");
                 }
                 
                 statement.close();
