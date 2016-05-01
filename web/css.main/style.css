@@ -477,3 +477,7 @@ and open the template in the editor.
 	max-width: 80em;
         text-align: center;
 }
+.buybutton{
+    margin-left: 30em;
+    margin-top: 2em;
+}

@@ -73,12 +73,23 @@
                                             <button id="delete"  name="delete">delete</button>
                                         </form>
                                     </td>
+                                  
                                 </tr>
-
+                                
                             </c:forEach>
                         </tbody>
                     </table>
                 </div> 
+<form class="buybutton" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="ransarface@abv.bg">
+    <input type="hidden" name="currency_code" value="GBP">
+    <input type="hidden" name="item_name" value="Products">
+    <input type="hidden" name="amount" value="${total}">
+    <input type="image" src="https://www.sandbox.paypal.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online.">
+    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+
             </div>    
         </div>  
         <%@include file ="footer.jsp"%>

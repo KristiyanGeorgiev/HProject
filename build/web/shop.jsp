@@ -61,7 +61,7 @@
         ${edit}
         <div class='shop_class' id="tableProductsDiv">
             <div id='products'>
-                <h1  style="text-align: center">${msg} </h1>
+                <h1 style="text-align: center; margin-top: 1.5em; color:green">${msg} </h1>
                 <c:forEach items="${allProducts}" var="nextProduct">
 
                     <div class='products'>
@@ -88,7 +88,13 @@
                                     </div>
                                 
                                     <input type="hidden" name="id" value="${nextProduct.id}">
-                                    <button class="btn btn-primary">Add to cart</button>
+                                    <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="ZX22GHSKZXASU">
+                                        <input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_cart_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+
                              </div>
                             </div>
                         </form>
