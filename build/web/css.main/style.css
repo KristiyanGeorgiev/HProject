@@ -46,6 +46,13 @@ and open the template in the editor.
     background-repeat: no-repeat;
 }
 
+.twotwo{
+    height: 80em;
+    background-image: url("http://wallpaperstock.net/grey-brick-wall-wallpapers_43828_1920x1200.jpg");
+    margin: 0px;
+    background-repeat: no-repeat;
+}
+
 .three{
     height: 75em;
     background-image: url("../Pictures/one.jpg");
@@ -425,8 +432,8 @@ and open the template in the editor.
 
 #products{
     margin:0 auto;
-    width: 1200px;
-    height: 1200px;
+    width: 83em;
+    height: 100%;
 }
 
 #shop_images img{
@@ -473,11 +480,95 @@ and open the template in the editor.
 	border-radius: 0.5em;
 	opacity: 0.95;
 	margin: 0 auto;
-	margin-top: 6em;
+	margin-top: 2em;
 	max-width: 80em;
         text-align: center;
 }
 .buybutton{
     margin-left: 30em;
     margin-top: 2em;
+}
+
+.gallery_class {
+    display:none; 
+    margin:0 auto; 
+    background-color: #fff; 
+    width:75%;
+}
+
+#images_id {
+    margin:0 auto;
+    width: 100em;
+    height: 55em;
+}
+
+.images_class{
+    margin-top: 2em;
+    height:24.8em;
+    display: inline-block;
+    padding: 20px;
+}
+
+#gallery_images img{
+     height: 18.5em;; 
+     width: 20.25em;
+}
+
+.body-panel-images {	
+	height: 18.6em;
+        width: 20.2em;
+	background-position: center;
+	background-size: cover;
+        background-color:#eee;
+}
+
+.panel-container-images {	
+	height: 21.9em;
+        width: 20.5em;
+	border: solid 0.2em #9a2d43;
+	border-radius: 0.5em;
+	opacity: 0.95;
+	margin: 0 auto;
+	max-width: 80em;
+        text-align: center;
+}
+
+.videos_button {
+    margin-top: 3.6em !important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+    padding-left: 3em !important;
+    padding-right: 3em !important;
+    margin-left: 59.5em !important;
+}
+
+.image_button{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+    padding-left: 3em !important;
+    padding-right: 3em !important;
+    margin-left: 62.5em !important;
+}
+
+.panel-container-videos {		
+	height: 25.9em;
+        width: 40.2em;
+	border: solid 0.2em #9a2d43;
+	border-radius: 0.5em;
+	opacity: 0.95;
+	margin: 0 auto;
+	margin-top: 6em;
+	max-width: 80em;
+}
+
+.body-panel-videos {	
+	height: 22.5em;
+        width: 40em;
+	background-position: center;
+	background-size: cover;
+        background-color:#eee;
+}
+
+.videos_title{
+    width: 33.4em;
 }

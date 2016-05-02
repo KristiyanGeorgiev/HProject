@@ -1,15 +1,19 @@
  
 package Controllers;
 
+import beans.User;
 import beans.UsersService;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
  
 public class DeleteUsers extends HttpServlet {
@@ -21,9 +25,20 @@ public class DeleteUsers extends HttpServlet {
         
         
         UsersService usersService = new UsersService();
-         
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("user");
         usersService.delete(request.getParameter("username"));
-        request.setAttribute("users", usersService.getAllUsers());
+        List<User> users = usersService.getAllUsers();
+        
+        List<User> filteredUsers = new ArrayList<>();
+        for (User user : users) {
+            if (!user.getUsername().equals(username)){
+                filteredUsers.add(user);
+            }
+        }
+         
+        
+        request.setAttribute("users", filteredUsers);
 
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/delete_users.jsp");

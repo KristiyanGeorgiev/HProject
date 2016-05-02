@@ -20,8 +20,6 @@
         <li><a href="about.jsp">About</a></li>
         <li><a href="schedule.jsp">Schedule</a></li>
         <li><a href="trainers.jsp">Trainers</a></li>
-        <li><a href="shop.jsp">Online Shop</a></li>
-        <li><a href="gallery.jsp">Gallery</a></li>
         <li><a href="contactus.jsp">Contact Us</a></li>
       </ul>
         
@@ -39,7 +37,7 @@
 <ul class="nav navbar-nav">
         <li><a href="index.jsp">Home</a></li>
         <li><a href="about.jsp">About</a></li>
-        <li><a href="schedule.jsp">Schedule</a></li>
+        <li><a href="timetables.jsp">Schedule</a></li>
         <li><a href="trainers.jsp">Trainers</a></li>
         <li><a href="ProductsController">Shop</a></li>
         <li><a href="GalleryController">Gallery</a></li>
@@ -53,7 +51,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="AdminFormController">Shop Management</a></li>
                     <li><a href="AdminGalleryController">Gallery Management</a></li>
-                    <li><a href="AdminEditUsersController">Delete/Edit Users</a></li>
+                    <li><a href="AdminEditUsersController">User Management</a></li>
                 </ul>            
         </li>
 </c:if>

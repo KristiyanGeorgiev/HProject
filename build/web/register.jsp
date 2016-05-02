@@ -22,47 +22,47 @@
               <h2 class='header'>Register for Navarro's Fitness and Fighting Gym</h2>
               
               
-              <jsp:useBean id="user" scope="request" class="beans.User"></jsp:useBean>
+              
               
               <form action="RegisterController" method="post" >
                 <div class="form-group username">
                     <label>Username:</label>
-                    <input type="text" name="username" value="<jsp:getProperty name="user" property="username"/>" class="form-control" required>
+                    <input type="text" name="username" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>First Name:</label>
-                    <input type="text" name="firstname" value="<jsp:getProperty name="user" property="firstname"/>" class="form-control" required>
+                    <input type="text" name="firstname" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>Last Name:</label>
-                    <input type="text" name="lastname" value="<jsp:getProperty name="user" property="lastname"/>" class="form-control" required>
+                    <input type="text" name="lastname" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>Country:</label>
-                    <input type="text" name="country" value="<jsp:getProperty name="user" property="country"/>" class="form-control">
+                    <input type="text" name="country" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label>Street Address:</label>
-                    <input type="text" name="street" value="<jsp:getProperty name="user" property="street"/>" class="form-control">
+                    <input type="text" name="street" class="form-control">
                 </div>
                 
                 <div class="form-group">
                     <label>Postcode:</label>
-                    <input type="text" name="postcode" value="<jsp:getProperty name="user" property="postcode"/>" class="form-control">
+                    <input type="text" name="postcode" class="form-control">
                 </div>
                   
                 <div class="form-group">
                     <label>Email address:</label>
-                    <input type="text" name="email" value="<jsp:getProperty name="user" property="email"/>" class="form-control" required>
+                    <input type="text" name="email" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
                     <label>Password:</label>
-                    <input type="password" name="password" value="<jsp:getProperty name="user" property="password"/>" class="form-control" required>
+                    <input type="password" name="password" class="form-control" required>
                 </div>
 
                   

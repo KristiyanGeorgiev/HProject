@@ -47,9 +47,9 @@
                     
                         <div class="panel_title">About Marc "The FreacanRican" Navarro</div>
                         <div class="body-panel-buttons">
-                            <button type="button" class="btn btn-primary about_button_one">See Mark's Schedule</button>
+                            <button type="button" class="btn btn-primary about_button_one"><a href="timetables.jsp">See Mark's Schedule</a></button>
                             <button type="button" class="btn btn-primary about_button_two">Book a session with Mark</button>
-                            <button type="button" class="btn btn-primary about_button_three">Bibliography</button>
+                            <button type="button" class="btn btn-primary about_button_three"><a href="trainers.jsp">Bibliography</a></button>
                         </div>
                     
                 </div> 

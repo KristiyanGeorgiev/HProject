@@ -52,21 +52,23 @@
     <%@include file ="header.jsp"%>
     <body class="bodyadmin">
 
-        <h2 class='header'>Gallery:</h2>
+        <a class="btn btn-primary btns videos_button" href="videos.jsp">Videos Gallery</a><br><br>
         ${edit}
-        <div style="  display:none; margin:0 auto; background-color: rgba(0,0,0,0.4); width:80%;" id="tableImagesDiv">
-            <div style="margin:0 auto;width:1000px">
+        <div class='gallery_class' id="tableImagesDiv">
+            <div id='images_id'>
                 <h1  style="text-align: center">${msg} </h1>
                 <c:forEach items="${allImages}" var="nextImage">
 
-                    <div style="display: inline-block;padding: 20px; ">
-                        <div>
-                            <h3>Product: ${nextImage.name}</h3>
+                    <div class='images_class'>
+                        <div class="panel-container-images">
+                             <div class="panel_title">${nextImage.name}</div>
+                                <div class="body-panel-images">
+                                    <div id="gallery_images">
+                                        <img src="data:image/png;base64,${nextImage.imgString}">
+                                    </div>
+                                    <input type="hidden" name="id" value="${nextImage.id}">
+                                </div>
                         </div>
-                        <div>
-                            <img src="data:image/png;base64,${nextImage.imgString}"  style = "width:200px">
-                        </div>
-                             <input type="hidden" name="id" value="${nextImage.id}">
                     </div>
                 </c:forEach>
             </div>

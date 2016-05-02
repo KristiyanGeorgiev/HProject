@@ -88,7 +88,7 @@
                             
                             <a class="btn btn-primary btns" href="membership.jsp">Monthly Membership</a><br><br>
                             
-                            <a class="btn btn-primary btns" href="paypalpay.jsp">Contact Us</a>
+                            <a class="btn btn-primary btns" href="contactus.jsp">Contact Us</a>
                             
                             </div>
                         </div>
