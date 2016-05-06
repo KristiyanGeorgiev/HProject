@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav">
         <li><a href="index.jsp">Home</a></li>
         <li><a href="about.jsp">About</a></li>
-        <li><a href="schedule.jsp">Schedule</a></li>
+        <li><a href="timetables.jsp">Schedule</a></li>
         <li><a href="trainers.jsp">Trainers</a></li>
         <li><a href="contactus.jsp">Contact Us</a></li>
       </ul>

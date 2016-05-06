@@ -16,14 +16,16 @@ public class Product {
     private float price;
     private InputStream img;
     private String imgString;
+    private String type;
 
     public Product() {
     }
 
-    public Product(String name, float price, InputStream img) {
+    public Product(String name, float price, InputStream img, String type) {
         this.name = name;
         this.price = price;
         this.img = img;
+        this.type = type;
     }
 
     public void setName(String name) {
@@ -33,6 +35,15 @@ public class Product {
     public String getName() {
         return this.name;
     }
+    
+    public void setType(String type) {
+       this.type = type;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+    
 
     public void setId(int id) {
         this.id = id;
@@ -91,13 +102,14 @@ public class Product {
             //-----------------Getting Connection----------------------------------------- 
             int id = getMaxId();
 
-            PreparedStatement insertProduct = connection.prepareStatement("insert into products values(?,?,?,?)");
+            PreparedStatement insertProduct = connection.prepareStatement("insert into products values(?,?,?,?,?)");
 
             id = id + 1;
             insertProduct.setInt(1, id);
             insertProduct.setString(2, name);
             insertProduct.setFloat(3, price);
             insertProduct.setBlob(4, img);
+            insertProduct.setString(5, type);
 
             int i = insertProduct.executeUpdate();
 

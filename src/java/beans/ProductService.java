@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ProductService {
 
-    public List<Product> getAllProducts() {
+     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
         try {
             //-----------------Getting Connection-----------------------------------------        
@@ -21,8 +21,9 @@ public class ProductService {
 
             Connection connection = conn.Connection();
             //-----------------Getting Connection----------------------------------------- 
-            PreparedStatement query = connection.prepareStatement("select * from products  ORDER BY `id`  DESC");
+            PreparedStatement query = connection.prepareStatement("select * from products   ORDER BY `id`  DESC");
 
+             
             ResultSet rs = query.executeQuery();
 
             while (rs.next()) {
@@ -31,6 +32,46 @@ public class ProductService {
                 product.setId(rs.getInt("id"));
                 product.setName(rs.getString("name"));
                 product.setPrice(rs.getFloat("price"));
+                product.setType(rs.getString("type"));
+
+                Blob blob = rs.getBlob("image");
+                byte[] imgData = new byte[10];
+                imgData = blob.getBytes(1, (int) blob.length());
+                String b64 = javax.xml.bind.DatatypeConverter.printBase64Binary(imgData);
+
+                product.setImgString(b64);
+
+                products.add(product);
+            }
+
+            connection.close();
+
+        } catch (Exception e2) {
+            System.out.println(e2);
+        }
+
+        return products;
+    }
+    public List<Product> getAllProducts(String type) {
+        List<Product> products = new ArrayList<>();
+        try {
+            //-----------------Getting Connection-----------------------------------------        
+            Database conn = new Database();
+
+            Connection connection = conn.Connection();
+            //-----------------Getting Connection----------------------------------------- 
+            PreparedStatement query = connection.prepareStatement("select * from products where type=?  ORDER BY `id`  DESC");
+
+            query.setString(1, type);
+            ResultSet rs = query.executeQuery();
+
+            while (rs.next()) {
+                Product product = new Product();
+
+                product.setId(rs.getInt("id"));
+                product.setName(rs.getString("name"));
+                product.setPrice(rs.getFloat("price"));
+                product.setType(rs.getString("type"));
 
                 Blob blob = rs.getBlob("image");
                 byte[] imgData = new byte[10];

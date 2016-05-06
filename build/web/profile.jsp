@@ -86,7 +86,7 @@
                         
                             <a class="btn btn-primary btns" href="EditProfile">Edit Your Profile</a><br><br>
                             
-                            <a class="btn btn-primary btns" href="membership.jsp">Monthly Membership</a><br><br>
+                            <a class="btn btn-primary btns" href="MembershipController">Monthly Membership</a><br><br>
                             
                             <a class="btn btn-primary btns" href="contactus.jsp">Contact Us</a>
                             

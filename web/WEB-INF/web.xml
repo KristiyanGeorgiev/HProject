@@ -68,6 +68,10 @@
         <servlet-name>DeleteUsers</servlet-name>
         <servlet-class>Controllers.DeleteUsers</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MembershipController</servlet-name>
+        <servlet-class>Controllers.MembershipController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>DeleteUsers</servlet-name>
         <url-pattern>/DeleteUsers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MembershipController</servlet-name>
+        <url-pattern>/MembershipController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

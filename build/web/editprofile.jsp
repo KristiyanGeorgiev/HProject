@@ -33,7 +33,7 @@
               
               
               <form action="UpdateProfileController" method="post" >
-                <div class="fProfileControllerorm-group username">
+                <div class="fProfileControllerorm-group username_profile">
                     <label>Username:</label>
                     <input type="text" name="username" value="${loggedUser.username}" class="form-control">
                 </div>

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href='css.main/bootstrap.min.css' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <script src="js/validation.js"></script>
   <link href='css.main/style.css' rel='stylesheet' type='text/css'>
  
 </head>
@@ -22,21 +23,21 @@
               <h2 class='header'>Register for Navarro's Fitness and Fighting Gym</h2>
               
               
-              
+              <p>All fields with * are required </p>
               
               <form action="RegisterController" method="post" >
                 <div class="form-group username">
-                    <label>Username:</label>
+                    <label>*Username:</label>
                     <input type="text" name="username" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
-                    <label>First Name:</label>
+                    <label>*First Name:</label>
                     <input type="text" name="firstname" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
-                    <label>Last Name:</label>
+                    <label>*Last Name:</label>
                     <input type="text" name="lastname" class="form-control" required>
                 </div>
                   
@@ -56,13 +57,17 @@
                 </div>
                   
                 <div class="form-group">
-                    <label>Email address:</label>
-                    <input type="text" name="email" class="form-control" required>
+                    <label>*Email address:</label>
+                    <input type="email" name="email" class="form-control" required>
                 </div>
                   
                 <div class="form-group">
-                    <label>Password:</label>
+                    <label>*Password:</label>
                     <input type="password" name="password" class="form-control" required>
+                </div>
+                  <div class="form-group">
+                    <label>* Confirm Password:</label>
+                    <input type="password" name="re-password" class="form-control" required>
                 </div>
 
                   

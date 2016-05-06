@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controllers;
 
 import beans.ProductService;
@@ -10,18 +15,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ProductsController extends HttpServlet {
+/**
+ *
+ * @author KiKo
+ */
+public class MembershipController extends HttpServlet {
 
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
               ProductService productService = new ProductService();
-        request.setAttribute("allProducts", productService.getAllProducts("product"));
+        request.setAttribute("allProducts", productService.getAllProducts("membership"));
 
         ServletContext context = getServletContext();
-        RequestDispatcher dispatch = context.getRequestDispatcher("/shop.jsp");
+        RequestDispatcher dispatch = context.getRequestDispatcher("/membership.jsp");
         dispatch.forward(request, response);
     }
     
@@ -41,6 +49,4 @@ public class ProductsController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }
-
 }
-

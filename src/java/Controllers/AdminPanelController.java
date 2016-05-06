@@ -23,7 +23,9 @@ public class AdminPanelController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String name = request.getParameter("name");
+        String type = request.getParameter("type");
           
+         System.out.println(type);
         float price = Float.valueOf(request.getParameter("price"));
         String update = request.getParameter("update");
         String delete = request.getParameter("delete");
@@ -65,7 +67,7 @@ public class AdminPanelController extends HttpServlet {
 
                 if (inputStream != null && filePart.getSize() <= size) {
 
-                    Product product = new Product(name, price, inputStream);
+                    Product product = new Product(name, price, inputStream, type);
                     boolean success = false;
                     success = product.save();
                     if (success == true) {

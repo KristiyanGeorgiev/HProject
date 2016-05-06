@@ -15,6 +15,11 @@ and open the template in the editor.
     margin-right:50em;
 }
 
+.footer{
+   height: 3em; 
+   margin-top: 0.7em;
+}
+
 .user{
     height: 10em !important;
     margin: 0px;
@@ -144,7 +149,7 @@ and open the template in the editor.
 
 .bodylogin{
    background-repeat: no-repeat; 
-   background-image: url("../Pictures/picfive.jpg");
+   background-image: url("http://www.mrwallpaper.com/wallpapers/boxing.jpg");
 }
 
 .bodyadmin{
@@ -161,7 +166,7 @@ and open the template in the editor.
     margin:0 auto;
 }
 
-.username {
+.username_profile {
     margin-top: 4em;
 }
 .bodyabout{  
@@ -265,7 +270,7 @@ and open the template in the editor.
 }
 
 .body-panel {	
-	height: 30em;
+	height: 30.1em;
 	background-position: center;
 	background-size: cover;
 	margin: 0 auto;
@@ -280,13 +285,13 @@ and open the template in the editor.
 }
 
 .panel-trainers {
-    background-image: url("http://i.telegraph.co.uk/multimedia/archive/01853/amir-khan_1853789c.jpg");
+    background-image: url("http://www.abae.co.uk/aba/cache/file/9A88B93C-5247-4538-991A33DE9A81FB30.jpg");
     height: 30em;
     width: 24em;
 }
 
 .panel-register {
-    background-image: url("http://mapleleaftax.com/wp-content/uploads/2015/09/tax_regulations.gif");
+    background-image: url("http://www.1e.com/blogs/wp-content/uploads/sites/78/2015/11/video.jpg");
 }
 
 .panel-gallery {
@@ -350,6 +355,13 @@ and open the template in the editor.
     margin-top: 2em;
     padding-left: 1.8em !important;
     padding-right: 1.8em !important;
+}
+.about_button_one a{
+    color:white;
+}
+
+.about_button_three a{
+    color:white;
 }
 
 .about_button_two {
@@ -433,7 +445,7 @@ and open the template in the editor.
 #products{
     margin:0 auto;
     width: 83em;
-    height: 100%;
+    height: 73em;
 }
 
 #shop_images img{
@@ -571,4 +583,15 @@ and open the template in the editor.
 
 .videos_title{
     width: 33.4em;
+}
+.error {
+	border-color: red !important;
+	color: red !important;
+}
+.success {
+	color: green !important;
+}
+.valid {
+	border-color: green !important;
+	color: green !important;
 }

@@ -24,7 +24,7 @@
     
     <div class="col-md-4 col-sm-6 col-xs-12 container_whole">
  	<div class="panel-container">
-            <a href="/group/ps/appointments">
+            <a href="timetables.jsp">
   		<div class="panel_title">Training Schedule</div>
                     <div class="body-panel panel-schedule"></div>
             </a>
@@ -32,23 +32,9 @@
     </div>
     
     
-    
     <div class="col-md-4 col-sm-6 col-xs-12 container_whole">
  	<div class="panel-container">
-            <a href="/group/ps/appointments">
-  		<div class="panel_title">Purchase a monthly membership</div>
-                    <div class="body-panel panel-membership"></div>
-            </a>
-  	</div> 
-    </div>
-</div>
-
- 
-    
-  <div class="jumbotron two">
-    <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
- 	<div class="panel-container">
-            <a href="/group/ps/appointments">
+            <a href="trainers.jsp">
   		<div class="panel_title">Meet the Trainers</div>
                     <div class="body-panel panel-trainers"></div>
             </a>
@@ -56,11 +42,24 @@
     </div>
     
     
+</div>
+    
+  <div class="jumbotron two">
     
     <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
  	<div class="panel-container">
-            <a href="/group/ps/appointments">
-  		<div class="panel_title">Register an account</div>
+            <a href="membership.jsp">
+  		<div class="panel_title">Purchase a monthly membership</div>
+                    <div class="body-panel panel-membership"></div>
+            </a>
+  	</div> 
+    </div>
+    
+    
+    <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
+ 	<div class="panel-container">
+            <a href="videos.jsp">
+  		<div class="panel_title">Videos Gallery</div>
                     <div class="body-panel panel-register"></div>
             </a>
   	</div> 
@@ -71,8 +70,8 @@
   <div class="jumbotron three">
     <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
  	<div class="panel-container">
-            <a href="/group/ps/appointments">
-  		<div class="panel_title">View the Gallery</div>
+            <a href="gallery.jsp">
+  		<div class="panel_title">Pictures Gallery</div>
                     <div class="body-panel panel-gallery"></div>
             </a>
   	</div> 
@@ -82,8 +81,8 @@
     
     <div class="col-md-6 col-sm-6 col-xs-12 container_whole">
  	<div class="panel-container">
-            <a href="/group/ps/appointments">
-  		<div class="panel_title">View the shop</div>
+            <a href="shop.jsp">
+  		<div class="panel_title">Online shop</div>
                     <div class="body-panel panel-shop"></div>
             </a>
   	</div> 

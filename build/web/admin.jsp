@@ -20,11 +20,14 @@
         <link rel="stylesheet" href='css.main/bootstrap.min.css' type='text/css'>          
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link href='css.main/style.css' rel='stylesheet' type='text/css'>
+        <script src="js/validation.js"></script>
         <script>
             $(document).ready(function () {
-                $("#tableProductsDiv").slideDown("slow");
+                $("#tableProductsDiv").slideDown("slow"); 
                 $("#tableProducts").DataTable({
-                    "order": [[0, "desc"]]
+                    "order": [[0, "desc"]],
+                    "iDisplayLength": 5,
+                    "aLengthMenu"   : [ 5, 10, 20  ]
                 });
                 $("#update").click(function () {
                     $("#update").val("updatee");
@@ -54,13 +57,17 @@
                     </div>
                     <div class="form-group">
                         <label for="price">Price</label>
-                        <input class="form-control" type="text" id="price" name= "price">
+                        <input class="form-control"  type="text" id="price" name= "price">
                     </div>
                     <div class="form-group">
                         <label for="photo"> Product Image:</label>
                         <input class="form-control" type="file" name="photo" id="photo"/>
                     </div>
-
+                    <select name="type" id="type">
+                        <option value="membership" >membership</option>
+                        <option value="product" selected>product</option>
+ 
+</select>    
                     <div>
                         <button class="btn btn-primary" id="add_product" >Add Product</button>
                     </div>    
